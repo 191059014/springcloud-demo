@@ -1,0 +1,42 @@
+#hibernate相关配置
+hibernate:
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  show_sql: true
+  format_sql: true
+  hbm2ddl.auto: update
+  packagesToScan: com.hb.**.entity
+spring:
+  #redis缓存的配置
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 0
+    timeout: 1800000ms
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+  #rabbit的配置http://localhost:15672
+  rabbitmq:
+    host: 0.0.0.0
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+    connection-timeout: 30000ms
+    publisher-confirms: false
+    template:
+      exchange: EX_DEFAULT
+      routing-key: RK_DEFAULT
+    cache:
+      connection:
+        mode: connection
+      channel:
+        size: 50
+        checkout-timeout: 10000ms
+

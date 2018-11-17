@@ -1,0 +1,42 @@
+server:
+  port: 8763
+
+spring:
+  application:
+    name: gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    #面向服务的路由
+    business-web-route:
+      path: /business-web/**
+      service-id: business-web
+  #是否开启路由重试
+  retryable: true
+
+ribbon:
+  #对当前服务的重试次数
+  MaxAutoRetries: 3
+  #切换实例的重试次数
+  MaxAutoRetriesNextServer: 0
+  #请求处理的超时时间
+  ReadTimeout: 6000
+  #请求连接的超时时间
+  ConnectTimeout: 6000
+  #对所有操作请求都进行重试
+  OkToRetryOnAllOperations: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            #将 hystrix 的超时时间设置成 5000 毫秒(hystrix超时时间小于ribbon连接超时时间，先走hystrix)
+            timeoutInMilliseconds: 5000
+

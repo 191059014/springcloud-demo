@@ -1,0 +1,13 @@
+#datasource相关配置
+spring:
+  datasource:
+    hikari:
+      data-source-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/businessdb?setUnicode=true&characterEncoding=utf8
+      username: root
+      password: root3306
+      read-only: false
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 10
