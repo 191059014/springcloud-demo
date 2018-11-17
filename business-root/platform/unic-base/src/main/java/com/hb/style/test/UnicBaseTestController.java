@@ -15,7 +15,7 @@ public class UnicBaseTestController implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("UnicBaseTestController===" + dialect);
+        //System.out.println("UnicBaseTestController===" + dialect);
     }
 
     @GetMapping("/test")

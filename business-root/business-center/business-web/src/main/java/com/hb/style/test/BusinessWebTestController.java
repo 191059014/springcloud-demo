@@ -19,11 +19,11 @@ public class BusinessWebTestController implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(111);
+        //System.out.println(111);
     }
 
     @GetMapping("/test")
     public void test() {
-        System.out.println(111);
+        //System.out.println(111);
     }
 }
