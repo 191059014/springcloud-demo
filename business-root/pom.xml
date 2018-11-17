@@ -12,7 +12,7 @@
         <module>register-center</module>
         <module>gateway</module>
         <module>platform</module>
-        <module>business-web</module>
+        <module>business-center</module>
     </modules>
     <name>business-root</name>
     <packaging>pom</packaging>
@@ -27,10 +27,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <swagger.version>2.7.0</swagger.version>
-        <mysql.connector.java.version>5.1.47</mysql.connector.java.version>
+        <mysql.version>5.1.47</mysql.version>
         <fastjson.version>1.2.7</fastjson.version>
-        <unic.base.version>1.0-SNAPSHOT</unic.base.version>
-        <unic.util.version>1.0-SNAPSHOT</unic.util.version>
     </properties>
 
     <parent>
@@ -49,17 +47,6 @@
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>com.hb.style</groupId>
-                <artifactId>unic-base</artifactId>
-                <version>${unic.base.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hb.style</groupId>
-                <artifactId>unic-util</artifactId>
-                <version>${unic.util.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
