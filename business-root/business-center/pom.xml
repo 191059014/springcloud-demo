@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>business-web</module>
+        <module>business-test</module>
     </modules>
 
     <groupId>com.hb.style</groupId>
@@ -41,5 +42,27 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+
+        <!-- 配置中心客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+
+        <!--注册中心客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!-- feign声明式REST调用 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

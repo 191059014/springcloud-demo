@@ -1,6 +1,11 @@
 #datasource相关配置
 spring:
   datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/businessdb?setUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: root3306
+#    type: com.zaxxer.hikari.HikariDataSource
     hikari:
       data-source-class-name: com.mysql.jdbc.Driver
       jdbc-url: jdbc:mysql://localhost:3306/businessdb?setUnicode=true&characterEncoding=utf8

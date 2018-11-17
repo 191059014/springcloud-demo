@@ -32,18 +32,6 @@
             <artifactId>unic-util</artifactId>
         </dependency>
 
-        <!--注册中心客户端-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <!-- feign声明式REST调用 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

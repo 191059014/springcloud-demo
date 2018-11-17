@@ -1,10 +1,28 @@
 #hibernate相关配置
 hibernate:
-  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  dialect: org.hibernate.dialect.Oracle12cDialect
   show_sql: true
-  format_sql: true
-  hbm2ddl.auto: update
-  packagesToScan: com.hb.**.entity
+  format_sql: false
+  use_sql_comments: true
+  max_fetch_depth: 1
+  generate_statistics: false
+  current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+  jdbc:
+    batch_size: 300
+  cache:
+    use_second_level_cache: false
+    provider_class: net.sf.ehcache.hibernate.EhCacheProvider
+    region:
+      factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+  hbm2ddl:
+    auto: none
+  search:
+    indexBase: c:/index
+    directory_provider: filesystem
+    batch_size: 1000
+    analyzer: org.apache.lucene.analysis.cjk.CJKAnalyzer
+    indexing_strategy: manual
+#spring相关配置
 spring:
   #redis缓存的配置
   cache:

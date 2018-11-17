@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 数据源 -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <property name="driverClassName" value="${spring.datasource.hikari.data-source-class-name}"/>
+        <property name="jdbcUrl" value="${spring.datasource.hikari.jdbc-url}"/>
+        <property name="username" value="${spring.datasource.hikari.username}"/>
+        <property name="password" value="${spring.datasource.hikari.password}"/>
+        <property name="readOnly" value="${spring.datasource.hikari.read-only}"/>
+        <property name="connectionTimeout" value="${spring.datasource.hikari.connection-timeout}"/>
+        <property name="idleTimeout" value="${spring.datasource.hikari.idle-timeout}"/>
+        <property name="maxLifetime" value="${spring.datasource.hikari.max-lifetime}"/>
+        <property name="maximumPoolSize" value="${spring.datasource.hikari.maximum-pool-size}"/>
+    </bean>
+
+    <!-- session工厂 -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+                <prop key="hibernate.max_fetch_depth">${hibernate.max_fetch_depth}</prop>
+                <prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
+                <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.current_session_context_class">${hibernate.current_session_context_class}</prop>
+                <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+                <prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+                <prop key="hibernate.cache.region.factory_class">${hibernate.cache.region.factory_class}</prop>
+                <prop key="hibernate.search.default.directory_provider">${hibernate.search.directory_provider}</prop>
+                <prop key="hibernate.search.default.indexBase">${hibernate.search.indexBase}</prop>
+                <prop key="hibernate.search.worker.batch_size">${hibernate.search.batch_size}</prop>
+                <prop key="hibernate.search.analyzer">${hibernate.search.analyzer}</prop>
+            </props>
+        </property>
+        <property name="packagesToScan" value="com.hb.style.**.entity"/>
+    </bean>
+
+    <!-- 事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- 事务 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" propagation="REQUIRED"/>
+            <tx:method name="find*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config expose-proxy="true" proxy-target-class="false">
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.hb.style..service..*(..))"/>
+    </aop:config>
+
+</beans>
