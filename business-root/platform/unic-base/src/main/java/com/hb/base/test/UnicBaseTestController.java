@@ -1,4 +1,4 @@
-package com.hb.style.test;
+package com.hb.base.test;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;

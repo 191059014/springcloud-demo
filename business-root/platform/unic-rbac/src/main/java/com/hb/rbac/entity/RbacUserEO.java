@@ -1,4 +1,6 @@
-package com.hb.style.entity;
+package com.hb.rbac.entity;
+
+import com.hb.base.entity.AbstractRelationBaseEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

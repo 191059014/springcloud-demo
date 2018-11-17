@@ -18,6 +18,8 @@
         <module>unic-base</module>
         <module>unic-util</module>
         <module>unic-rbac</module>
+        <module>unic-cache</module>
+        <module>unic-workflow</module>
     </modules>
 
     <properties>

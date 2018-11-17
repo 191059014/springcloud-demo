@@ -1,4 +1,4 @@
-package com.hb.style.entity;
+package com.hb.base.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

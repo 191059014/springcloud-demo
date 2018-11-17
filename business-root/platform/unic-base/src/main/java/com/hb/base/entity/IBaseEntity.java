@@ -1,4 +1,4 @@
-package com.hb.style.entity;
+package com.hb.base.entity;
 
 import java.io.Serializable;
 

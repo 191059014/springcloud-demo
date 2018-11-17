@@ -40,6 +40,8 @@
         <unic.base.version>1.0-SNAPSHOT</unic.base.version>
         <unic.util.version>1.0-SNAPSHOT</unic.util.version>
         <unic.rbac.version>1.0-SNAPSHOT</unic.rbac.version>
+        <unic.cache.version>1.0-SNAPSHOT</unic.cache.version>
+        <unic.workflow.version>1.0-SNAPSHOT</unic.workflow.version>
     </properties>
 
     <parent>
@@ -75,6 +77,16 @@
                 <groupId>com.hb.style</groupId>
                 <artifactId>unic-rbac</artifactId>
                 <version>${unic.rbac.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hb.style</groupId>
+                <artifactId>unic-cache</artifactId>
+                <version>${unic.cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hb.style</groupId>
+                <artifactId>unic-workflow</artifactId>
+                <version>${unic.workflow.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
