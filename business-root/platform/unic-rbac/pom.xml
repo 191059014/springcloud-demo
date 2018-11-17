@@ -3,15 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>business-center</artifactId>
+        <artifactId>platform</artifactId>
         <groupId>com.hb.style</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.hb.style</groupId>
-    <artifactId>business-web</artifactId>
+    <artifactId>unic-rbac</artifactId>
+    <name>unic-rbac</name>
     <packaging>jar</packaging>
-    <name>business-web</name>
     <url>http://www.example.com</url>
 
     <properties>
@@ -24,9 +25,10 @@
 
         <dependency>
             <groupId>com.hb.style</groupId>
-            <artifactId>unic-rbac</artifactId>
+            <artifactId>unic-base</artifactId>
         </dependency>
 
     </dependencies>
+
 
 </project>

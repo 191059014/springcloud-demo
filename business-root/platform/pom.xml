@@ -17,6 +17,7 @@
     <modules>
         <module>unic-base</module>
         <module>unic-util</module>
+        <module>unic-rbac</module>
     </modules>
 
     <properties>

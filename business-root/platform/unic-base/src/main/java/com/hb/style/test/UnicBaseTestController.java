@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("controller/base/unicBaseTestController")
 public class UnicBaseTestController implements InitializingBean {
 
-    @Value("${spring.datasource.hikari.data-source-class-name}")
-    private String driveClassName;
+    @Value("${hibernate.dialect}")
+    private String dialect;
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("UnicBaseTestController===" + driveClassName);
+        System.out.println("UnicBaseTestController===" + dialect);
     }
 
     @GetMapping("/test")

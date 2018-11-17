@@ -25,12 +25,21 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- springcloud -->
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
+        <!-- spring -->
+        <spring.version>5.0.7.RELEASE</spring.version>
+        <!-- hibernate -->
+        <hibernate.version>5.2.11.Final</hibernate.version>
+
         <swagger.version>2.7.0</swagger.version>
         <mysql.version>5.1.47</mysql.version>
         <fastjson.version>1.2.7</fastjson.version>
-        <hibernate.version>5.2.11.Final</hibernate.version>
-        <spring.version>4.3.11.RELEASE</spring.version>
+
+        <!-- platform -->
+        <unic.base.version>1.0-SNAPSHOT</unic.base.version>
+        <unic.util.version>1.0-SNAPSHOT</unic.util.version>
+        <unic.rbac.version>1.0-SNAPSHOT</unic.rbac.version>
     </properties>
 
     <parent>
@@ -40,15 +49,32 @@
         <relativePath/>
     </parent>
 
-    <!--统一管理版本-->
+    <!-- 统一管理版本 -->
     <dependencyManagement>
         <dependencies>
+            <!-- cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- platform各jar版本 -->
+            <dependency>
+                <groupId>com.hb.style</groupId>
+                <artifactId>unic-base</artifactId>
+                <version>${unic.base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hb.style</groupId>
+                <artifactId>unic-util</artifactId>
+                <version>${unic.util.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hb.style</groupId>
+                <artifactId>unic-rbac</artifactId>
+                <version>${unic.rbac.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
