@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>business-web</module>
-        <module>business-test</module>
+        <module>business-service</module>
     </modules>
 
     <groupId>com.hb.style</groupId>

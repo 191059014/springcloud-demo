@@ -1,9 +1,9 @@
 server:
-  port: 8081
+  port: 8001
 
 spring:
   application:
-    name: business-test
+    name: business-service
 
 eureka:
   client:

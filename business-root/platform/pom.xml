@@ -20,6 +20,7 @@
         <module>unic-rbac</module>
         <module>unic-cache</module>
         <module>unic-workflow</module>
+        <module>unic-tool</module>
     </modules>
 
     <properties>

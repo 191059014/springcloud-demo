@@ -57,4 +57,10 @@ spring:
       channel:
         size: 50
         checkout-timeout: 10000ms
+  #mongodb
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+      username: test
+      password: test
 

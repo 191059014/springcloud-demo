@@ -10,10 +10,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hb.style</groupId>
-    <artifactId>business-test</artifactId>
+    <artifactId>business-service</artifactId>
     <packaging>jar</packaging>
     <name>business-test</name>
     <url>http://www.example.com</url>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.hb.style</groupId>
+            <artifactId>unic-rbac</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hb.style</groupId>
+            <artifactId>unic-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hb.style</groupId>
+            <artifactId>unic-tool</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
