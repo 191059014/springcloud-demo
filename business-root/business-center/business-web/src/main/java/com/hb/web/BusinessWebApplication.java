@@ -1,16 +1,18 @@
-package com.hb.style;
+package com.hb.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
+@ComponentScan(basePackages = {"com.hb.*"})
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@ImportResource(locations = "classpath:config/web-application-context.xml")
+@ImportResource(locations = "classpath:config/web-applicationContext.xml")
 public class BusinessWebApplication {
 
     public static void main(String[] args) {
