@@ -16,6 +16,9 @@ zuul:
     business-web-route:
       path: /business-web/**
       service-id: business-web
+    business-service-route:
+      path: /business-service/**
+      service-id: business-service
   #是否开启路由重试
   retryable: true
 

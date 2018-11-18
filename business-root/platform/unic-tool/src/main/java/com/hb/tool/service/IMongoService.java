@@ -1,4 +1,4 @@
-package com.hb.style.service;
+package com.hb.tool.service;
 
 public interface IMongoService {
 

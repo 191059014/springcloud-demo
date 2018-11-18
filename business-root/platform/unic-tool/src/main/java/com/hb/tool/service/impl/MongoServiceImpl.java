@@ -1,6 +1,6 @@
-package com.hb.style.service.impl;
+package com.hb.tool.service.impl;
 
-import com.hb.style.service.IMongoService;
+import com.hb.tool.service.IMongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;

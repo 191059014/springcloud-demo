@@ -1,4 +1,4 @@
-package com.hb.style;
+package com.hb.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

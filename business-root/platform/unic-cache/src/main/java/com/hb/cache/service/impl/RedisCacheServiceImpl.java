@@ -1,7 +1,7 @@
-package com.hb.style.service.impl;
+package com.hb.cache.service.impl;
 
-import com.hb.style.service.AbstractRedisCacheService;
-import com.hb.style.service.IRedisCacheService;
+import com.hb.cache.service.AbstractRedisCacheService;
+import com.hb.cache.service.IRedisCacheService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.hb.style.service;
+package com.hb.tool.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

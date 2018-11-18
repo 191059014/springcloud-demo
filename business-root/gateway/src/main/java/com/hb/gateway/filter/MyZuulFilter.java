@@ -1,4 +1,4 @@
-package com.hb.style.filter;
+package com.hb.gateway.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.exception.ZuulException;
@@ -27,7 +27,7 @@ public class MyZuulFilter extends ZuulFilter {
     @Override
     public Object run() throws ZuulException {
         //拦截器的具体实现
-        System.out.println("...MyFilter...");
+        System.out.println("...MyZuulFilter...");
         return null;
     }
 

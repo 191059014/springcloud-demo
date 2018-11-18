@@ -1,4 +1,4 @@
-package com.hb.style;
+package com.hb.tool;
 
 /**
  * Hello world!

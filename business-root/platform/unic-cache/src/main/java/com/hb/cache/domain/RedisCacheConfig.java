@@ -1,4 +1,4 @@
-package com.hb.style.domain;
+package com.hb.cache.domain;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

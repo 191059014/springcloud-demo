@@ -1,4 +1,4 @@
-package com.hb.style.fallback;
+package com.hb.gateway.fallback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
