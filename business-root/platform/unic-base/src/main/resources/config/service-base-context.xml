@@ -40,7 +40,7 @@
                 <prop key="hibernate.search.analyzer">${hibernate.search.analyzer}</prop>
             </props>
         </property>
-        <property name="packagesToScan" value="com.hb.style.**.entity"/>
+        <property name="packagesToScan" value="com.hb.**.entity"/>
     </bean>
 
     <!-- 事务管理器 -->
@@ -53,10 +53,11 @@
         <tx:attributes>
             <tx:method name="get*" propagation="REQUIRED"/>
             <tx:method name="find*" propagation="REQUIRED"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
     <aop:config expose-proxy="true" proxy-target-class="false">
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.hb.style..service..*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.hb..service..*(..))"/>
     </aop:config>
 
 </beans>

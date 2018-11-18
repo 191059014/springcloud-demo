@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("controller/base/unicBaseTestController")
 public class UnicBaseTestController implements InitializingBean {
 
-    @Value("${hibernate.dialect}")
+    //@Value("${spring.jpa.database-platform}")
     private String dialect;
 
     @Override
